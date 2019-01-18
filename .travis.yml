@@ -15,10 +15,10 @@ after_success:
   - docker build -t avinashd30/multi-worker ./worker
 
 #Log in to the docker CLI
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 #Push the images to docker hup
-- docker push avinashd30/multi-container-client
-- docker push avinashd30/multi-nginx
-- docker push avinashd30/multi-server
-- docker push avinashd30/multi-worker
+  - docker push avinashd30/multi-container-client
+  - docker push avinashd30/multi-nginx
+  - docker push avinashd30/multi-server
+  - docker push avinashd30/multi-worker
